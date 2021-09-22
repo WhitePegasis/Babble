@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/chatbackgroung"
+    tools:context=".chatDetailActivity"
+    android:id="@+id/parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#009688"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImageDp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:padding="5dp"
+                android:src="@drawable/avatar"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/arrow"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Username"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/profileImageDp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/callimg"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/call"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/privateChatRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="596dp"
+        android:layout_above="@+id/linearlayout"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginBottom="-2dp"
+        android:paddingBottom="10dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#9ECFCB"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/cameraimg"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="TODO"
+            android:minWidth="10dp"
+            android:minHeight="10dp"
+            android:src="@drawable/camera"
+            tools:ignore="ImageContrastCheck" />
+
+        <EditText
+            android:id="@+id/messagesendtext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/sendmessagebg"
+            android:hint="Hey how are you"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            tools:ignore="TextContrastCheck" />
+
+        <ImageView
+            android:id="@+id/attachmentimg"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="0dp"
+            android:contentDescription="TODO"
+            android:minWidth="10dp"
+            android:minHeight="10dp"
+            android:src="@drawable/attachment" />
+
+        <ImageView
+            android:id="@+id/sendMessage"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/send"
+
+            tools:ignore="ImageContrastCheck" />
+
+
+    </LinearLayout>
+</RelativeLayout>

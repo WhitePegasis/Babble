@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".setProfileActivity">
+
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profilePic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/avatar"
+        tools:layout_editor_absoluteY="53dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#A89494"/>
+
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Profile Setup"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profilePic" />
+
+    <TextView
+        android:id="@+id/userPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Setup your name and Profile pic"
+        android:textColor="#8C8B8F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview1" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userPhoneNumber"
+        android:layout_margin="20dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Enter your Name"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/numberbg"
+                android:padding="10dp"
+                android:layout_margin="8dp"/>
+            <Button
+                android:id="@+id/profileSetupBtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Setup Profile"
+                android:backgroundTint="#009688"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
